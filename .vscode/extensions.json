@@ -1,0 +1,20 @@
+{
+    "recommendations": [
+        "ms-vscode.vscode-typescript-tslint-plugin",
+        "alexiv.vscode-angular2-files",
+        "formulahendry.auto-rename-tag",
+        "nurlybekovnt.csharpextensions",
+        "matijarmk.dotnet-core-commands",
+        "ivanov-artyom.create-migration",
+        "msjsdiag.debugger-for-chrome",
+        "pkief.material-icon-theme",
+        "christian-kohler.path-intellisense",
+        "jmrog.vscode-nuget-package-manager",
+        "mngrm3a.shell-command",
+        "esbenp.prettier-vscode",
+        "formulahendry.auto-close-tag",
+        "infinity1207.angular2-switcher",
+        "johnpapa.angular2",
+        "angular.ng-template"
+    ]
+}
