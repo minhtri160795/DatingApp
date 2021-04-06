@@ -20,7 +20,6 @@ C:\Users\tri.nguyen\Documents\Source\DatingApp\DatingApp.API\bin\Debug\net5.0\Mi
 C:\Users\tri.nguyen\Documents\Source\DatingApp\DatingApp.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\tri.nguyen\Documents\Source\DatingApp\DatingApp.API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\tri.nguyen\Documents\Source\DatingApp\DatingApp.API\bin\Debug\net5.0\Microsoft.OpenApi.dll
-C:\Users\tri.nguyen\Documents\Source\DatingApp\DatingApp.API\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\tri.nguyen\Documents\Source\DatingApp\DatingApp.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\tri.nguyen\Documents\Source\DatingApp\DatingApp.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\tri.nguyen\Documents\Source\DatingApp\DatingApp.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -59,3 +58,4 @@ C:\Users\tri.nguyen\Documents\Source\DatingApp\DatingApp.API\obj\Debug\net5.0\Da
 C:\Users\tri.nguyen\Documents\Source\DatingApp\DatingApp.API\obj\Debug\net5.0\DatingApp.API.genruntimeconfig.cache
 C:\Users\tri.nguyen\Documents\Source\DatingApp\DatingApp.API\bin\Debug\net5.0\Humanizer.dll
 C:\Users\tri.nguyen\Documents\Source\DatingApp\DatingApp.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\tri.nguyen\Documents\Source\DatingApp\DatingApp.API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
