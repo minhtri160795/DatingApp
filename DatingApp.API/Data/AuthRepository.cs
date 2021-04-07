@@ -41,9 +41,17 @@ namespace DatingApp.API.Data
             user.Password = password;
             user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
-            return user;
+            try
+            {
+                _context.Users.Add(user);
+                _context.SaveChanges();
+                return user;
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+
         }
 
         public async Task<bool> UserExists(string username)
