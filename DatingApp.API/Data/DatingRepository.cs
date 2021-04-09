@@ -29,7 +29,7 @@ namespace DatingApp.API.Data
         public async Task<Users> GetUser(int id)
         {
             var user = await _context.Users.Include(p => p.Photos).FirstOrDefaultAsync(u => u.Id == id);
-            var returnUsers =  _map.Map<UsersForDetailDto>(user);
+            var returnUsers = _map.Map<UsersForDetailDto>(user);
             return user;
         }
 
@@ -40,7 +40,6 @@ namespace DatingApp.API.Data
 
             return users;
         }
-
         public async Task<bool> SaveAll()
         {
             return await _context.SaveChangesAsync() > 0;
