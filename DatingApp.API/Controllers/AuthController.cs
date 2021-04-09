@@ -34,7 +34,7 @@ namespace DatingApp.API.Controllers
             username = username.ToLower();
             if (await _repo.UserExists(username))
                 return BadRequest("Username already exists");
-            var user = new User
+            var user = new Users
             {
                 UserName = username
             };
@@ -70,7 +70,7 @@ namespace DatingApp.API.Controllers
             dtoUser.UserName = dtoUser.UserName.ToLower();
             if (await _repo.UserExists(dtoUser.UserName))
                 return BadRequest("Username already exists");
-            var user = new User
+            var user = new Users
             {
                 UserName = dtoUser.UserName
             };

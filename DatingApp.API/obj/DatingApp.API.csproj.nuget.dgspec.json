@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tri.nguyen\\Documents\\Source\\DatingApp\\DatingApp.API\\DatingApp.API.csproj": {}
+    "C:\\Users\\tri.nguyen\\Documents\\Source\\DatingApp\\datingapp.api\\DatingApp.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tri.nguyen\\Documents\\Source\\DatingApp\\DatingApp.API\\DatingApp.API.csproj": {
+    "C:\\Users\\tri.nguyen\\Documents\\Source\\DatingApp\\datingapp.api\\DatingApp.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tri.nguyen\\Documents\\Source\\DatingApp\\DatingApp.API\\DatingApp.API.csproj",
+        "projectUniqueName": "C:\\Users\\tri.nguyen\\Documents\\Source\\DatingApp\\datingapp.api\\DatingApp.API.csproj",
         "projectName": "DatingApp.API",
-        "projectPath": "C:\\Users\\tri.nguyen\\Documents\\Source\\DatingApp\\DatingApp.API\\DatingApp.API.csproj",
+        "projectPath": "C:\\Users\\tri.nguyen\\Documents\\Source\\DatingApp\\datingapp.api\\DatingApp.API.csproj",
         "packagesPath": "C:\\Users\\tri.nguyen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tri.nguyen\\Documents\\Source\\DatingApp\\DatingApp.API\\obj\\",
+        "outputPath": "C:\\Users\\tri.nguyen\\Documents\\Source\\DatingApp\\datingapp.api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tri.nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[5.0.4, )"
@@ -56,9 +60,21 @@
               "target": "Package",
               "version": "[5.0.4, )"
             },
+            "Microsoft.OpenApi": {
+              "target": "Package",
+              "version": "[1.2.3, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[5.6.3, )"
+              "version": "[6.1.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
             }
           },
           "imports": [
