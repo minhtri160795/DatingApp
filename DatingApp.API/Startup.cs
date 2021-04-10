@@ -18,6 +18,7 @@ using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using DatingApp.API.Helpers;
 
 namespace DatingApp.API
 {
@@ -36,6 +37,7 @@ namespace DatingApp.API
             services.AddDbContext<DataContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc();
             services.AddAutoMapper();
+            services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
             services.AddMvc(options => options.EnableEndpointRouting = false);
             //OR
             services.AddControllers(options => options.EnableEndpointRouting = false);

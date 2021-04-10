@@ -9,5 +9,6 @@ namespace DatingApp.API.Data
 
         public DbSet<Value> Value { get; set; } 
         public DbSet<Users> Users { get; set; }
+        public DbSet<Photo> Photo { get; set; }
     }
 }

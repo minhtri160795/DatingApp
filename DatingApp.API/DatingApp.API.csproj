@@ -12,5 +12,6 @@
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="4.0.0"/>
     <PackageReference Include="Microsoft.OpenApi" Version="1.2.3"/>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2"/>
+    <PackageReference Include="CloudinaryDotNet" Version="1.15.1"/>
   </ItemGroup>
 </Project>

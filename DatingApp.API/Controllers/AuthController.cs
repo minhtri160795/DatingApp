@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using DatingApp.API.Data;
 using DatingApp.API.Dtos;
 using DatingApp.API.Models;
@@ -22,11 +23,13 @@ namespace DatingApp.API.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IAuthRepository _repo;
-        private readonly IConfiguration config;
-        public AuthController(IAuthRepository repo, IConfiguration config)
+        private readonly IConfiguration _config;
+        private readonly IMapper _map;
+        public AuthController(IAuthRepository repo, IConfiguration config, IMapper map)
         {
-            this.config = config;
+            _config = config;
             _repo = repo;
+            _map = map;
         }
         [HttpPost("register1")]
         public async Task<IActionResult> Register1(string username, string password)
@@ -53,16 +56,22 @@ namespace DatingApp.API.Controllers
                 new Claim(ClaimTypes.NameIdentifier,userFromRepo.Id.ToString()),
                 new Claim(ClaimTypes.Name, userFromRepo.UserName)
             };
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config.GetSection("AppSettings:Token").Value));
-            var creds = new SigningCredentials(key,SecurityAlgorithms.HmacSha512Signature);
-            var tokenDescriptor = new  SecurityTokenDescriptor{
-                    Subject = new ClaimsIdentity(claims),
-                    Expires = DateTime.Now.AddDays(1),
-                    SigningCredentials = creds
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSettings:Token").Value));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.Now.AddDays(1),
+                SigningCredentials = creds
             };
-            var tokenHandler = new  JwtSecurityTokenHandler();
+            var tokenHandler = new JwtSecurityTokenHandler();
             var token = tokenHandler.CreateToken(tokenDescriptor);
-            return Ok(new {token = tokenHandler.WriteToken(token)});
+            var user = _map.Map<UsersForListDto>(userFromRepo);
+            return Ok(new
+            {
+                token = tokenHandler.WriteToken(token),
+                user
+            });
         }
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserRegisterDto dtoUser)

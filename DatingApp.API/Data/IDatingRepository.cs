@@ -7,11 +7,13 @@ namespace DatingApp.API.Data
 {
     public interface IDatingRepository
     {
-        public void Add<T>(T entity) where T : class;
-        public void Delete<T>(T entity) where T : class;
-        public Task<bool> SaveAll();
-        public Task<IEnumerable<Users>> GetUsers();
-        public Task<Users> GetUser(int id);
+         void Add<T>(T entity) where T : class;
+         void Delete<T>(T entity) where T : class;
+         Task<bool> SaveAll();
+         Task<IEnumerable<Users>> GetUsers();
+         Task<Users> GetUser(int id);
+         Task<Photo> GetPhoto(int id);
+         Task<Photo> GetCurrentMainPhoto(int id);
     }
 
 
