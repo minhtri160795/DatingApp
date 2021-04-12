@@ -31,21 +31,9 @@ namespace DatingApp.API.Controllers
             _repo = repo;
             _map = map;
         }
-        [HttpPost("register1")]
-        public async Task<IActionResult> Register1(string username, string password)
-        {
-            username = username.ToLower();
-            if (await _repo.UserExists(username))
-                return BadRequest("Username already exists");
-            var user = new Users
-            {
-                UserName = username
-            };
-            var createdUser = await _repo.Register(user, password);
-            return Ok(StatusCode(201));
-        }
+
         [HttpPost("login")]
-        public async Task<IActionResult> Login(UserRegisterDto dtoUser)
+        public async Task<IActionResult> Login(UserLoginDto dtoUser)
         {
             var userFromRepo = await _repo.Login(dtoUser.UserName, dtoUser.Password);
             if (userFromRepo == null)
@@ -79,12 +67,12 @@ namespace DatingApp.API.Controllers
             dtoUser.UserName = dtoUser.UserName.ToLower();
             if (await _repo.UserExists(dtoUser.UserName))
                 return BadRequest("Username already exists");
-            var user = new Users
-            {
-                UserName = dtoUser.UserName
-            };
-            var createdUser = _repo.Register(user, dtoUser.Password);
-            return Ok(StatusCode(201));
+            var userToCreate = _map.Map<Users>(dtoUser);
+            var createdUser = await _repo.Register(userToCreate, dtoUser.Password);
+            // sai đây nè
+            
+            var userToReturn = _map.Map<UsersForDetailDto>(createdUser);
+            return CreatedAtRoute("GetUser", new { controller = "Users", id = createdUser.Id }, userToReturn);
         }
     }
 }

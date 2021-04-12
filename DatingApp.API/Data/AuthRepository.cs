@@ -42,15 +42,14 @@ namespace DatingApp.API.Data
             user.PasswordSalt = passwordSalt;
             try
             {
-                _context.Users.Add(user);
-                _context.SaveChanges();
+                await _context.Users.AddAsync(user);
+                await _context.SaveChangesAsync();
                 return user;
             }
             catch (System.Exception ex)
             {
                 throw ex;
             }
-
         }
 
         public async Task<bool> UserExists(string username)

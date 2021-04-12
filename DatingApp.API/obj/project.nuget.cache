@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8MZ0w2GNBE812FT+gawbxdX9gMMJgRbQFNhqctr0aY+J6MKmnLh1EktxH0gtkglv5zKTsYJS9jdgEKY7XKUY4g==",
+  "dgSpecHash": "26hwDVg2bwL6ces7W2TAKkG/XyPfxC2OhwbjFf+wZZPaINeMIvOmGqhIsaJQJZgFta6TOHKXsoIMfrAiXnhhpw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tri.nguyen\\Documents\\Source\\DatingApp\\datingapp.api\\DatingApp.API.csproj",
+  "projectFilePath": "C:\\Users\\tri.nguyen\\Documents\\Source\\DatingApp\\DatingApp.API\\DatingApp.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tri.nguyen\\.nuget\\packages\\automapper\\7.0.0\\automapper.7.0.0.nupkg.sha512",
     "C:\\Users\\tri.nguyen\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\4.0.0\\automapper.extensions.microsoft.dependencyinjection.4.0.0.nupkg.sha512",

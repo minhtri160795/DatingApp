@@ -44,6 +44,7 @@ namespace DatingApp.API
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IDatingRepository, DatingRepository>();
             services.AddTransient<Seed>();
+            services.AddScoped<LogUserActivity>();
             services.AddSwaggerGen(options =>
                 {
                     options.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo
